@@ -88,7 +88,7 @@ function main() {
   gui.addColor(controls, 'color');
   gui.add(controls, "reset");
   gui.add(controls, "mad stormy");
-  gui.add(controls, "blue guy");
+  gui.add(controls, "blue guy"); 
 
   // get canvas and webgl context
   const canvas = <HTMLCanvasElement> document.getElementById('canvas');
