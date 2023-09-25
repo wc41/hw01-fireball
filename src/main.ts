@@ -21,7 +21,8 @@ const controls = {
   'FBMgain': 0.65,
   perlinFactor: 0.09,
   'reset': reset,
-  'stormy': exploding
+  'mad stormy': exploding,
+  'blue guy': littleguy
 };
 function reset() {
   controls['tesselations'] = 5;
@@ -40,6 +41,15 @@ function exploding() {
   controls['FBMfrequency'] = 9.8;
   controls['FBMgain'] = 0.7;
   controls['perlinFactor'] = 0.12;
+}
+function littleguy() {
+  controls['tesselations'] = 3;
+  controls['color'] = [49, 24, 130, 1];
+  controls['FBMspeed'] = 0.0059;
+  controls['PulseSpeed'] = 0.18;
+  controls['FBMfrequency'] = 3.2;
+  controls['FBMgain'] = 0.54;
+  controls['perlinFactor'] = 0.0;
 }
 
 let icosphere: Icosphere;
@@ -77,7 +87,8 @@ function main() {
   gui.add(controls, 'PulseSpeed', 0, 0.4).step(0.01);
   gui.addColor(controls, 'color');
   gui.add(controls, "reset");
-  gui.add(controls, "stormy");
+  gui.add(controls, "mad stormy");
+  gui.add(controls, "blue guy");
 
   // get canvas and webgl context
   const canvas = <HTMLCanvasElement> document.getElementById('canvas');
