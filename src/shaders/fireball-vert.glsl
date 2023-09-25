@@ -54,7 +54,7 @@ vec3 fade(vec3 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
 float perlin3d(vec3 P){
   vec3 Pi0 = floor(P); // Integer part for indexing
   vec3 Pi1 = Pi0 + vec3(1.0); // Integer part + 1
-  Pi0 = mod(Pi0, 289.0);
+  Pi0 = mod(Pi0, 289.0); 
   Pi1 = mod(Pi1, 289.0);
   vec3 Pf0 = fract(P); // Fractional part for interpolation
   vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0
