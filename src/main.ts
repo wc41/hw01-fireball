@@ -53,7 +53,7 @@ function littleguy() {
   controls['perlinFactor'] = 0.0;
 }
 function oppenheimer() {
-  controls['tesselations'] = 5;
+  controls['tesselations'] = 6;
   controls['color'] = [101, 1, 1, 1];
   controls['FBMspeed'] = 0.0044;
   controls['PulseSpeed'] = 0.0;

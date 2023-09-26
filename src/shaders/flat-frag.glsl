@@ -14,16 +14,16 @@ float noise2D(vec2 p) {
 }
 
 void main() {
-  float timeFunc = cos(0.007f * float(u_Time));
-  float timeFunc5 = sin(0.002f * float(u_Time));
+  float timeFunc = cos(0.01f * float(u_Time));
+  float timeFunc5 = sin(0.008f * float(u_Time));
 
-  float timeFunc2 = cos(0.01f * float(u_Time) + 0.2);
-  float timeFunc3 = sin(0.02f * float(u_Time) + 0.2);
-  float timeFunc4 = sin(0.003f * float(u_Time) + 0.2);
+  float timeFunc2 = cos(0.004f * float(u_Time) + 0.2);
+  float timeFunc3 = sin(0.013f * float(u_Time) + 0.2);
+  float timeFunc4 = sin(0.007f * float(u_Time) + 0.2);
 
   float xPos = fs_Pos.x / 2. + 1.;
   float yPos = fs_Pos.y / 2. + 1.;
-  vec3 vColor = mix(vec3(0.0, 0.0, 0.), vec3( 0.05, 0.0, 0.02), yPos);
+  vec3 vColor = mix(vec3(0.05, 0.05, 0.05), vec3( 0.12, 0.0, 0.02), yPos);
 
   if (noise2D(vec2(xPos, yPos)) > 0.32f && noise2D(vec2(xPos, yPos)) < 0.3202f) {
     float brightness = noise2D(vec2(yPos, xPos)) + (timeFunc);

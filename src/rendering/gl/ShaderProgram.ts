@@ -64,7 +64,6 @@ class ShaderProgram {
     this.unifPulseFrequency= gl.getUniformLocation(this.prog, "u_PulseFrequency");
 
     this.unifSpeed= gl.getUniformLocation(this.prog, "u_Speed");
-
   }
   
   use() {
