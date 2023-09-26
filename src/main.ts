@@ -21,8 +21,9 @@ const controls = {
   'FBMgain': 0.65,
   perlinFactor: 0.09,
   'reset': reset,
-  'mad stormy': exploding,
-  'blue guy': littleguy
+  'supercore (party inside)': exploding,
+  'blue guy': littleguy,
+  'oppenheimer': oppenheimer
 };
 function reset() {
   controls['tesselations'] = 5;
@@ -36,19 +37,28 @@ function reset() {
 function exploding() {
   controls['tesselations'] = 7;
   controls['color'] = [103, 3, 3, 1];
-  controls['FBMspeed'] = 0.0062;
+  controls['FBMspeed'] = 0.013;
   controls['PulseSpeed'] = 0.24;
-  controls['FBMfrequency'] = 9.8;
-  controls['FBMgain'] = 0.7;
-  controls['perlinFactor'] = 0.12;
+  controls['FBMfrequency'] = 15;
+  controls['FBMgain'] = 0.67;
+  controls['perlinFactor'] = 0.22;
 }
 function littleguy() {
   controls['tesselations'] = 3;
   controls['color'] = [49, 24, 130, 1];
-  controls['FBMspeed'] = 0.0059;
+  controls['FBMspeed'] = 0.002;
   controls['PulseSpeed'] = 0.18;
-  controls['FBMfrequency'] = 3.2;
+  controls['FBMfrequency'] = 5.4;
   controls['FBMgain'] = 0.54;
+  controls['perlinFactor'] = 0.0;
+}
+function oppenheimer() {
+  controls['tesselations'] = 5;
+  controls['color'] = [101, 1, 1, 1];
+  controls['FBMspeed'] = 0.0044;
+  controls['PulseSpeed'] = 0.0;
+  controls['FBMfrequency'] = 3.3;
+  controls['FBMgain'] = 0.53;
   controls['perlinFactor'] = 0.0;
 }
 
@@ -87,7 +97,8 @@ function main() {
   gui.add(controls, 'PulseSpeed', 0, 0.4).step(0.01);
   gui.addColor(controls, 'color');
   gui.add(controls, "reset");
-  gui.add(controls, "mad stormy");
+  gui.add(controls, "oppenheimer"); 
+  gui.add(controls, "supercore (party inside)");
   gui.add(controls, "blue guy"); 
 
   // get canvas and webgl context
