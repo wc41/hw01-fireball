@@ -1,5 +1,23 @@
 # [Project 1: Noise](https://github.com/CIS-566-Fall-2022/hw01-fireball-base)
 
+Live Demo Link: https://wc41.github.io/hw01-fireball/
+
+## Pulsing Fireball / Explosion Editor
+
+![image](https://github.com/wc41/hw01-fireball/assets/97757188/ccbc5cab-70bf-43d7-b7b1-8522e7fa9b91)
+![image](https://github.com/wc41/hw01-fireball/assets/97757188/0e1341b9-9bd6-40f0-a6f0-1085419446cd)
+![image](https://github.com/wc41/hw01-fireball/assets/97757188/d90b7c94-8965-4f41-bfb3-8b4ddabd45e0)
+![image](https://github.com/wc41/hw01-fireball/assets/97757188/8959b87a-2f5c-4309-ac9d-6a63585d758e)
+
+- Toolbox functions:
+    - smoothstep for colors based on deformation distance
+    - sawtooth and impulse functions for pulsing effect (sawtooth to get a repeatedly increasing time value and impulse to control the Perlin noise factor)
+    - triangle function to change core brightness (hard to notice but it repeatedly gets brighter and darker)
+- Uses FBM as low amplitude noise, added to Perlin noise for high amplitude "spikiness"
+- Background is a flat shader with stars that fade in and out
+- GUI lets you modify FBM amplification factor, FBM speed & frequency, Perlin factor (spikiness), Pulse speed, and color
+    - also contains cool presets
+
 ## Objective
 
 Get comfortable with using WebGL and its shaders to generate an interesting 3D, continuous surface using a multi-octave noise algorithm.
